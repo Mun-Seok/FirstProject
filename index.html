@@ -5,15 +5,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>pickNumberGame</title>
+        <link rel="stylesheet" href="./reset.css" />
         <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <h1>숫자 맞추기 게임!!!!</h1>
-        <div id="result_area">결과가 나온다</div>
-        <div id="chance-area">남은 찬스 : 7번</div>
-        <input type="number" id="user_input" />
-        <button id="play_button">go!!</button>
-        <button id="reset_button">리셋!!</button>
+        <div class="wrap">
+            <img src="./img/Updown.webp" alt="updown이미지" />
+            <div id="result_area" class="result_area">숫자를 맞춰보세요.</div>
+            <ul class="input">
+                <li>
+                    <input type="number" id="user_input" class="user_input" />
+                </li>
+                <li>
+                    <button id="play_button" class="play_button">play</button>
+                </li>
+            </ul>
+            <div id="chance-area" class="chance_areas">남은 기회: 7</div>
+            <button id="reset_button" class="reset_button">Reset</button>
+            <ul>
+                <li><img src="./img/updown.jpg" alt="" /></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
         <script src="./main.js"></script>
     </body>
 </html>

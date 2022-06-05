@@ -57,14 +57,14 @@ function play() {
         return; //반환값 설정 이외에도 종료시키는 기능을 함
     }
     if (userValueList.includes(USER_VALUE)) {
-        resultArea.textContent = '이미 입력한 숫자이므로 다른 숫자를 입력해주세요';
+        resultArea.textContent = '중복된 숫자';
         return;
     }
     userValueList.push(USER_VALUE);
     if (USER_VALUE < computerNumber) {
-        resultArea.textContent = 'UP!!'; //textContent 내용 저장
+        resultArea.textContent = 'UP'; //textContent 내용 저장
     } else if (USER_VALUE > computerNumber) {
-        resultArea.textContent = 'DOWN!!';
+        resultArea.textContent = 'DOWN';
     } else {
         resultArea.textContent = '정답!!';
         gameOver = true;
@@ -94,7 +94,7 @@ function play() {
     https://developer.mozilla.org/ko/docs/web/API/Node
     */
     chances--;
-    chanceArea.innerHTML = `남은 찬스 : ${chances}번`; // ` 백틱 사용하면 띄워쓰기 생각하기 쉬움
+    chanceArea.innerHTML = `남은 기회 : ${chances}`; // ` 백틱 사용하면 띄워쓰기 생각하기 쉬움
     console.log(chances);
     if (chances == 0) {
         gameOver = true;
@@ -111,11 +111,11 @@ function focusInput() {
 function reset() {
     pickRandomNumber();
     userInput.value = '';
-    resultArea.textContent = '결과가 나온다';
+    resultArea.textContent = '숫자를 맞춰보세요';
     gameOver = false;
     playButton.disabled = false;
     chances = 7;
-    chanceArea.innerHTML = `남은 찬스 : ${chances}번`;
+    chanceArea.innerHTML = `남은 기회: ${chances}`;
     userValueList = [];
 }
 pickRandomNumber();
