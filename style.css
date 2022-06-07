@@ -38,6 +38,7 @@ img {
     border: 4px solid navy;
     background-color: navy;
     color: white;
+    cursor: pointer;
 }
 .chance_areas {
     width: 100%;
@@ -55,4 +56,78 @@ img {
     border-radius: 5px;
     background-color: navy;
     color: white;
+}
+.reset_button:hover {
+    background-color: red;
+}
+/* 모바일 끝 */
+/* 테블릿 시작 */
+@media (min-width: 768px) {
+    #wrap {
+        max-width: 1259px;
+    }
+    .img01 {
+        position: relative;
+        top: 10%;
+        width: 80%;
+    }
+    .result_area {
+        position: absolute;
+        top: 33%;
+        margin: 0 0 0 30%;
+        font-size: 50px;
+        text-align: center;
+    }
+    .input {
+        position: absolute;
+        top: 38%;
+        left: 5%;
+    }
+    .user_input {
+        width: 350px;
+        height: 70px;
+    }
+    input[type='number'] {
+        font-size: 45px;
+    }
+    .play_button {
+        width: 100px;
+        height: 70px;
+    }
+    .chance_areas {
+        font-size: 50px;
+        margin: 13% auto;
+    }
+    .reset_button {
+        height: 70px;
+        margin: -7% 0 0 30%;
+        border-radius: 30px;
+    }
+    .img02 {
+        width: 50%;
+    }
+}
+/* 테블릿 끝 */
+/* PC 시작 */
+@media (min-width: 1260px) {
+    #wrap {
+        max-width: 1920px;
+    }
+    * {
+        position: inherit;
+    }
+    .img01 {
+        width: 500px;
+        margin: 0 0 0 30%;
+    }
+    .result_area {
+        width: 800px;
+        margin: 0 auto;
+    }
+    .img02 {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        opacity: 0.5;
+    }
 }

@@ -53,7 +53,7 @@ function pickRandomNumber() {
 function play() {
     const USER_VALUE = userInput.value; //userInput의 value를 저장
     if (USER_VALUE < 1 || USER_VALUE > 100) {
-        resultArea.textContent = '1에서 100사이의 숫자를 입력해주세요.';
+        resultArea.textContent = '1에서 100사이의 숫자';
         return; //반환값 설정 이외에도 종료시키는 기능을 함
     }
     if (userValueList.includes(USER_VALUE)) {
@@ -111,11 +111,11 @@ function focusInput() {
 function reset() {
     pickRandomNumber();
     userInput.value = '';
-    resultArea.textContent = '숫자를 맞춰보세요';
+    resultArea.textContent = '숫자를 맞춰보세요.';
     gameOver = false;
     playButton.disabled = false;
     chances = 7;
-    chanceArea.innerHTML = `남은 기회: ${chances}`;
+    chanceArea.innerHTML = `남은 기회 : ${chances}`;
     userValueList = [];
 }
 pickRandomNumber();
