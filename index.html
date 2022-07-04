@@ -4,16 +4,33 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My First Project</title>
+        <title>pickNumberGame</title>
+        <link rel="stylesheet" href="./reset.css" />
         <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <h1>First Project</h1>
-        <h1>Second Project</h1>
-        <h1>Third Project</h1>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <div class="wrap">
+            <div class="container">
+                <img src="./img/Updown.webp" alt="updown이미지" class="img01" />
+                <div id="result_area" class="result_area">숫자를 맞춰보세요.</div>
+                <ul class="input">
+                    <li>
+                        <input type="number" id="user_input" class="user_input" />
+                    </li>
+                    <li>
+                        <button id="play_button" class="play_button">play</button>
+                    </li>
+                </ul>
+                <div id="chance-area" class="chance_areas">남은 기회: 7</div>
+                <button id="reset_button" class="reset_button">Reset</button>
+                <img src="./img/updown.jpg" alt="upDown" class="img02" />
+                <img src="./img/increase.png" alt="up" class="img03" />
+                <img src="./img/decrease.png" alt="down" class="img04" />
+            </div>
+        </div>
         <script src="./main.js"></script>
     </body>
 </html>
